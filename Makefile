@@ -81,7 +81,7 @@ install: install-doc
 	# adjust launcher's path
 	sed -i "s|/usr|$(DESTDIR)$(PREFIX)|g" $(DESTDIR)$(PREFIX)/share/applications/$(PACKAGE).desktop
 	if [ -d $(DESTDIR)$(PREFIX)/share/app-install/desktop ]; then\
-		ln -s $(DESTDIR)$(PREFIX)/share/applications/$(PACKAGE).desktop $(DESTDIR)$(PREFIX)/share/app-install/desktop/$(PACKAGE).desktop;\
+		ln -sf $(DESTDIR)$(PREFIX)/share/applications/$(PACKAGE).desktop $(DESTDIR)$(PREFIX)/share/app-install/desktop/$(PACKAGE).desktop;\
 	fi;
 
 install-doc:
